@@ -12,12 +12,16 @@
 //     $(thisStreamCardsSelector).addClass("card-highlight");
 // });
 
-$(document).ready(function(){
-$('p').click(function() {
-    $('p').children('a').css('background-color', 'yellow');
-});
+$(document).ready(function() {
+    $('p').click(function() {
+        $('p').children('a').css('background-color', 'yellow');
+    });
 
-$('button').click(function(){
-    $(this).prev().slideToggle('slow')
-});
+    // $('button').click(function(){
+    //     $(this).prev().slideToggle('slow')
+    // });
+
+    $('.card_image').click(function() {
+        $(this).next().children("p").slideDown('slow');
+    });
 });
