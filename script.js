@@ -12,6 +12,12 @@
 //     $(thisStreamCardsSelector).addClass("card-highlight");
 // });
 
-$('p').click(function(){
+$(document).ready(function(){
+$('p').click(function() {
     $('p').children('a').css('background-color', 'yellow');
-})
+});
+
+$('button').click(function(){
+    $(this).prev().slideToggle('slow')
+});
+});
