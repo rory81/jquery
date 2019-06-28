@@ -1,61 +1,13 @@
-$(document).ready(function() {
+$(".stream-nav").on("click", function() {
+    // A selector to match all cards in all streams
+    var allStreamsCardsSelector = ".card";
+    // A selector to match just this stream's cards
+    // for this, we use the class with the name of the stream,
+    // which is the same as this nav link's id and then the "-card" suffix.
+    var thisStreamCardsSelector = "." + this.id + ".card";
 
-
-	// $("p").click(function() {
-	// 	$("p").addClass('parRed');
-	// });
-
-	// $("h2").hover(function() {
-	// 	$("h2").addClass('h2Blue');
-	// });
-
-	// $("h2").hover(function() {
-	// 	$("h2").addClass('h2Blue');
-	// });
-
-	// $("#hr_html").hover(function() {
-	// 	$("#hr_mysql").removeClass('h2_font_size');
-	// 	$("#hr_python").removeClass('h2_font_size');
-	// 	$("#hr_jquery").removeClass('h2_font_size');
-	// 	$("#hr_django").removeClass('h2_font_size');
-	// 	$("#hr_css").removeClass('h2_font_size');
-	// 	$("#hr_html").addClass('h2_font_size');
-
-	// });
-
-	// $(".bottom_button").mouseenter(function() {
-	// 	$("body").addClass('bodyBlack')
-	// })
-
-	// $(".bottom_button").mouseleave(function() {
-	// 	$("body").addClass('bodyGrey')
-	// })
-
-	// $("#button_hide").click(function() {
-	// 	$("#par_hide").slideToggle("slow");
-	// })
-
-	// $("#button_hide").mouseenter(function() {
-	// 	$("#button_hide").fadeTo("slow", 0.5 );
-	// })
-	// $("#button_hide").mouseleave(function() {
-	// 	$("#button_hide").fadeTo("slow", 1 );
-	// })
-
-	// $('button').mouseenter(function(){
-	// 	$('button').removeClass('makeRed').addClass('makeBorder')
-	// });
-	// $('button').mouseleave(function(){
-	// 	$('button').removeClass('makeBorder').addClass('makeRed')
-	// });
-
-	$('button').click(function() {
-		$('p').slideToggle()
-	});
-
-	$('button').click(function() {
-		$('p').hide().show();
-	});
-
-
+    // First remove the highlight from all of the cards
+    $(allStreamsCardsSelector).removeClass("card-highlight");
+    // Then apply the highlight to just this stream's cards
+    $(thisStreamCardsSelector).addClass("card-highlight");
 });
